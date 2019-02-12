@@ -41,5 +41,5 @@ RUN pip install --upgrade setuptools --user python \
   pyspark==${PYSPARK_VERSION} \
   pandas==0.23.4
 
-RUN cd /opt/ && unzip /tmp/${PYGLUE} && cp -R awsglue /usr/lib/python${PYTHON_VERSION}/site-packages/awsglue
+RUN cd /opt/ && unzip /tmp/${PYGLUE} && cp -R awsglue /usr/lib/python2.7/site-packages/awsglue
 RUN rm -rf /tmp
