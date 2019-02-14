@@ -12,9 +12,7 @@ ADD https://bootstrap.pypa.io/get-pip.py /tmp/
 ENV PYGLUE PyGlue.zip
 ADD https://s3.amazonaws.com/aws-glue-jes-prod-us-east-1-assets/etl/python/PyGlue.zip /tmp/
 
-ENV ROOT_PATH=${PATH}:~/.local/bin
-
-RUN export ${ROOT_PATH} >> /etc/profile
+RUN echo export ROOT_PATH=${PATH}:~/.local/bin >> /etc/profile
 RUN apk add --update --no-cache \
   curl \
   make \
