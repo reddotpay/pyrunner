@@ -27,8 +27,7 @@ RUN apk add --update --no-cache \
  && rm -rf /var/cache/apk/*
 
 RUN cd /tmp/ && python /tmp/${PIP}
-RUN pip install --upgrade setuptools --user python \
-  awscli \
+RUN pip install awscli --upgrade setuptools --user python \
   autopep8 \
   virtualenv \
   pylint \
