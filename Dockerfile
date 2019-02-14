@@ -14,6 +14,7 @@ ADD https://s3.amazonaws.com/aws-glue-jes-prod-us-east-1-assets/etl/python/PyGlu
 
 ENV ROOT_PATH=${PATH}:~/.local/bin
 
+RUN export ${ROOT_PATH} >> /etc/profile
 RUN apk add --update --no-cache \
   curl \
   make \
