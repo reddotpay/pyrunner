@@ -27,13 +27,14 @@ RUN apk add --update --no-cache \
 
 RUN cd /tmp/ && python /tmp/${PIP}
 RUN pip install awscli --upgrade setuptools --user python \
-  autopep8 \
+  numpy==1.16.4 \
+  autopep8==1.4.4 \
   virtualenv \
-  pylint \
+  pylint==1.9.5 \
   coverage \
-  sphinx \
-  sphinx-rtd-theme \
-  boto3 \
+  sphinx==1.8.5 \
+  sphinx-rtd-theme==0.4.3 \
+  boto3==1.9.199 \
   py4j==0.10.4 \
   s3pypi \
   pyspark==${PYSPARK_VERSION} \
